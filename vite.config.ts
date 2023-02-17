@@ -15,7 +15,7 @@ export default ({ mode }) => {
         { find: '@assets', replacement: path.resolve(__dirname, 'src/assets') },
       ],
     },
-    // base: '//',
+    base: '/odin-memory-card/',
     plugins: [react(), { ...eslint({ cache: true, fix: true }), apply: 'build' }],
     server: {
       open: true,

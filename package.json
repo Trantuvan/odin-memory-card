@@ -1,9 +1,9 @@
 {
-  "name": "vite-typescript-template",
+  "name": "odin-memory-card",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "",
+  "homepage": "https://trantuvan.github.io/odin-memory-card",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
