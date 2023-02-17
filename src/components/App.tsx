@@ -1,5 +1,7 @@
+import { WelcomePage } from '@pages/index';
+
 function App() {
-  return <div className="App">Hello</div>;
+  return <WelcomePage />;
 }
 
 export default App;
