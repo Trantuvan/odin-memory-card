@@ -8,7 +8,7 @@ type TGlobalStyles = {
 };
 
 function GlobalStyle({ children }: TGlobalStyles) {
-  return <div>{children}</div>;
+  return <>{children}</>;
 }
 
 export default GlobalStyle;
