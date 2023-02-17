@@ -9,7 +9,7 @@ type HeaderProps = {
 
 function Header({ isHidden }: HeaderProps) {
   return (
-    <header>
+    <header className={clsx(styles.header)}>
       <img src={logo} alt="logo img" />
       <div
         className={clsx(styles.scores, {
