@@ -1,4 +1,11 @@
 :root {
   font-size: 62.5%;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Lora', serif;
+
+  --bg-clr: hsl(170, 52%, 13%);
+  --bg-score-clr: hsl(173, 34%, 24%);
+  --bg-rule-clr: hsl(170, 59%, 12%);
+
+  --text-break-clr: hsl(173, 34%, 24%);
+  --text-clr: hsl(47, 48%, 86%);
 }
