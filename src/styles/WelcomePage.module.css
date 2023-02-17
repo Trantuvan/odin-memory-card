@@ -7,6 +7,7 @@
 
 .guide-Box {
   padding: 2.4rem;
+  border-radius: 6px;
   width: min(50rem, 100%);
   text-align: center;
   border-bottom: 3px;
