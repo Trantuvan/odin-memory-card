@@ -1,11 +1,4 @@
-import '@styles/App.css';
-import { useEffect } from 'react';
-
-function App({ name }: { name: string }) {
-  useEffect(() => {
-    console.log(name);
-  }, [name]);
-
+function App() {
   return <div className="App">Hello</div>;
 }
 
