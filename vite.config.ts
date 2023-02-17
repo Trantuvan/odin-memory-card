@@ -13,6 +13,7 @@ export default ({ mode }) => {
         { find: '@components', replacement: path.resolve(__dirname, 'src/components') },
         { find: '@styles', replacement: path.resolve(__dirname, 'src/styles') },
         { find: '@assets', replacement: path.resolve(__dirname, 'src/assets') },
+        { find: '@pages', replacement: path.resolve(__dirname, 'src/pages') },
       ],
     },
     base: '/odin-memory-card/',
