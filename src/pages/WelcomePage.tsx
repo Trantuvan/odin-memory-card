@@ -4,7 +4,11 @@ import clsx from 'clsx';
 import styles from '@styles/WelcomePage.module.css';
 import { useState } from 'react';
 
-function WelcomePage() {
+type WelcomePageProps = {
+  handleTogglePage: () => void;
+};
+
+function WelcomePage({ handleTogglePage }: WelcomePageProps) {
   const [showRule, setRule] = useState(false);
 
   const guideContent =
@@ -32,7 +36,7 @@ function WelcomePage() {
         <button type="button" className={clsx(styles.btn, styles.btnLeft)} onClick={() => setRule(!showRule)}>
           {showRule ? 'Fantasy Realm' : 'Show Rule'}
         </button>
-        <button type="button" className={clsx(styles.btn, styles.btnRight)}>
+        <button type="button" className={clsx(styles.btn, styles.btnRight)} onClick={() => handleTogglePage()}>
           Play
         </button>
       </div>
