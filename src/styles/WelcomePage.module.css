@@ -1,5 +1,46 @@
 .welcome-section {
-  padding: 4em 4em 0;
-  margin: 0 auto;
-  width: min(120rem, 100%);
+  display: flex;
+  gap: 2em;
+  flex-direction: column;
+  align-items: center;
+}
+
+.guide-Box {
+  padding: 2.4rem;
+  width: min(50rem, 100%);
+  text-align: center;
+  border-bottom: 3px;
+  font-size: 2em;
+  line-height: 1.5;
+  color: var(--text-clr);
+  background-color: var(--bg-rule-clr);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.guide-Box > span {
+  color: var(--text-break-clr);
+}
+
+.actions {
+  display: flex;
+  gap: 2em;
+}
+
+.btn {
+  font-size: 2em;
+  padding: 0.8rem 1.6rem;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.btn-left {
+  color: var(--text-clr);
+  border: 1px solid var(--text-clr);
+  outline: transparent;
+}
+
+.btn-right {
+  color: var(--bg-clr);
+  background-color: var(--text-clr);
+  outline: transparent;
 }
