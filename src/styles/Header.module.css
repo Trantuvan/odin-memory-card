@@ -1,0 +1,28 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.scores {
+  display: flex;
+  gap: 1em;
+}
+
+.score-left,
+.score-right {
+  color: var(--text-clr);
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+.score-box {
+  font-size: 2rem;
+  background-color: var(--bg-score-clr);
+  padding: 0.2rem 0.8rem;
+  border-radius: 3px;
+}
+
+.hidden {
+  display: none;
+}
