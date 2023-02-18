@@ -14,6 +14,7 @@ export default ({ mode }) => {
         { find: '@styles', replacement: path.resolve(__dirname, 'src/styles') },
         { find: '@assets', replacement: path.resolve(__dirname, 'src/assets') },
         { find: '@pages', replacement: path.resolve(__dirname, 'src/pages') },
+        { find: '@helpers', replacement: path.resolve(__dirname, 'src/helpers') },
       ],
     },
     base: '/odin-memory-card/',
