@@ -19,25 +19,29 @@ import img18 from '@assets/imgs/cards/card18.png';
 import img19 from '@assets/imgs/cards/card19.png';
 import img20 from '@assets/imgs/cards/card20.png';
 
-export default [
-  img1,
-  img2,
-  img3,
-  img4,
-  img5,
-  img6,
-  img7,
-  img8,
-  img9,
-  img10,
-  img11,
-  img12,
-  img13,
-  img14,
-  img15,
-  img16,
-  img17,
-  img18,
-  img19,
-  img20,
+type TimgArr = { id: number; src: string }[];
+
+const imgsArray: TimgArr = [
+  { id: 1, src: img1 },
+  { id: 2, src: img2 },
+  { id: 3, src: img3 },
+  { id: 4, src: img4 },
+  { id: 5, src: img5 },
+  { id: 6, src: img6 },
+  { id: 7, src: img7 },
+  { id: 8, src: img8 },
+  { id: 9, src: img9 },
+  { id: 10, src: img10 },
+  { id: 11, src: img11 },
+  { id: 12, src: img12 },
+  { id: 13, src: img13 },
+  { id: 14, src: img14 },
+  { id: 15, src: img15 },
+  { id: 16, src: img16 },
+  { id: 17, src: img17 },
+  { id: 18, src: img18 },
+  { id: 19, src: img19 },
+  { id: 20, src: img20 },
 ];
+
+export default imgsArray;

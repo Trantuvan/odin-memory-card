@@ -7,8 +7,8 @@ import getImgs from '@helpers/getImgs';
 function GamePage() {
   return (
     <div className={clsx(styles.cardContainer)}>
-      {getImgs.map((img, index) => (
-        <Card key={index} imgUrl={img} />
+      {getImgs.map((img) => (
+        <Card key={img.id} imgUrl={img.src} />
       ))}
     </div>
   );
