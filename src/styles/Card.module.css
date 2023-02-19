@@ -1,0 +1,32 @@
+.card {
+  outline: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.card:hover > .card-img {
+  filter: saturate(1);
+  transform: translateY(0px);
+  animation: float 1s infinite;
+}
+
+.card-img {
+  aspect-ratio: 2/3;
+  object-fit: contain;
+  filter: saturate(50%);
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}

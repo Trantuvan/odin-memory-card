@@ -36,7 +36,7 @@ function WelcomePage({ handleTogglePage }: WelcomePageProps) {
         <button type="button" className={clsx(styles.btn, styles.btnLeft)} onClick={() => setRule(!showRule)}>
           {showRule ? 'Fantasy Realm' : 'Show Rule'}
         </button>
-        <button type="button" className={clsx(styles.btn, styles.btnRight)} onClick={() => handleTogglePage()}>
+        <button type="button" className={clsx(styles.btn, styles.btnRight)} onClick={handleTogglePage}>
           Play
         </button>
       </div>
