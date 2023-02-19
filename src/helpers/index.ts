@@ -1,1 +1,1 @@
-export { default as importAllImgs } from './importAllImgs';
+export { default as getImgs } from './getImgs';
