@@ -5,9 +5,11 @@ import styles from '@styles/Header.module.css';
 
 type HeaderProps = {
   isHidden: boolean;
+  currScore: number;
+  bestScore: number;
 };
 
-function Header({ isHidden }: HeaderProps) {
+function Header({ isHidden, currScore, bestScore }: HeaderProps) {
   return (
     <header className={clsx(styles.header)}>
       <img src={logo} alt="logo img" />
@@ -17,10 +19,10 @@ function Header({ isHidden }: HeaderProps) {
         })}
       >
         <div className={clsx(styles.scoreLeft)}>
-          Current Score <span className={clsx(styles.scoreBox)}>0</span>
+          Current Score <span className={clsx(styles.scoreBox)}>{currScore}</span>
         </div>
         <div className={clsx(styles.scoreRight)}>
-          Best Score <span className={clsx(styles.scoreBox)}>0</span>
+          Best Score <span className={clsx(styles.scoreBox)}>{bestScore}</span>
         </div>
       </div>
     </header>
