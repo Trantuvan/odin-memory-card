@@ -36,11 +36,12 @@ function App() {
       console.log('card selected');
       setBestScore(currScore);
       modalRef.current?.showModal();
+    } else {
+      // *click different card
+      console.log('add new card');
+      setSelectedCards((prevCards) => [...prevCards, index]);
+      setCurrScore((prevScore) => prevScore + 1);
     }
-    // *click different card
-    console.log('add new card');
-    setSelectedCards((prevCards) => [...prevCards, index]);
-    setCurrScore((prevScore) => prevScore + 1);
   };
 
   const handleRestState = () => {
