@@ -14,41 +14,38 @@ function App() {
 
   const modalRef = useRef<HTMLDialogElement>(null);
 
-  const handleClick = (e: React.MouseEvent, index: number): undefined => {
+  useEffect(() => {
+    // *win case
+    if (currScore === 20) {
+      console.log(`currScore: ${currScore}`);
+      setIsWon(true);
+      modalRef.current?.showModal();
+    }
+  }, [currScore]);
+
+  const handleClick = (e: React.MouseEvent, index: number) => {
     const indexSelected = selectedCards.find((cardIndex) => cardIndex === index);
     console.log({
       isSelectedCard: indexSelected,
       index,
     });
 
-    // *lose Case
     if (indexSelected) {
+      // *click the same card
       console.log('card selected');
       setBestScore(currScore);
       modalRef.current?.showModal();
-
-      // *reset selectedCards & currentScore
-      setSelectedCards([]);
-      setCurrScore(0);
-      return undefined;
     }
-
-    if (currScore === 20) {
-      console.log(`currScore: ${currScore}`);
-      setIsWon(true);
-      modalRef.current?.showModal();
-
-      // *reset selectedCards & currentScore
-      setSelectedCards([]);
-      setCurrScore(0);
-      return undefined;
-    }
-
+    // *click different card
     console.log('add new card');
     setSelectedCards((prevCards) => [...prevCards, index]);
     setCurrScore((prevScore) => prevScore + 1);
+  };
 
-    return undefined;
+  const handleRestState = () => {
+    // *reset selectedCards & currentScore
+    setSelectedCards([]);
+    setCurrScore(0);
   };
 
   return (
@@ -59,7 +56,13 @@ function App() {
       ) : (
         <WelcomePage handleTogglePage={() => setShow(!showGamePage)} />
       )}
-      <Modal ref={modalRef} isWon={isWon} handleIsWon={setIsWon} handleCloseModal={() => modalRef.current?.close()} />
+      <Modal
+        ref={modalRef}
+        isWon={isWon}
+        handleIsWon={setIsWon}
+        handleCloseModal={() => modalRef.current?.close()}
+        handleReset={handleRestState}
+      />
     </div>
   );
 }
