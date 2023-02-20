@@ -1,0 +1,41 @@
+.modal {
+  aspect-ratio: 4/2;
+  width: min(55.2rem, 100%);
+  background-color: var(--bg-modal-clr);
+  border: transparent;
+  outline: transparent;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  text-align: center;
+}
+
+.modal::backdrop {
+  background-color: rgba(54, 114, 107, 0.5);
+}
+
+.modal .heading {
+  color: var(--text-clr);
+  font-size: 3rem;
+  line-height: 2;
+}
+
+.modal .content {
+  color: var(--text-clr);
+  font-size: 2rem;
+  line-height: 2;
+  margin-bottom: 5rem;
+}
+
+.btn {
+  font-size: 2em;
+  padding: 0.8rem 1.6rem;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.btn-right {
+  color: var(--bg-clr);
+  background-color: var(--text-clr);
+  outline: transparent;
+  font-weight: bold;
+}
