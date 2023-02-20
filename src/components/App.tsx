@@ -18,6 +18,7 @@ function App() {
     // *win case
     if (currScore === 20) {
       console.log(`currScore: ${currScore}`);
+      setBestScore(currScore);
       setIsWon(true);
       modalRef.current?.showModal();
     }
