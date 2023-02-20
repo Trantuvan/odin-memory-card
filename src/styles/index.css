@@ -3,6 +3,7 @@
   font-family: 'Lora', serif;
 
   --bg-clr: hsl(170, 52%, 13%);
+  --bg-modal-clr: hsl(170, 59%, 12%);
   --bg-score-clr: rgba(54, 114, 107, 0.925);
   --bg-rule-clr: hsl(170, 59%, 12%);
 
