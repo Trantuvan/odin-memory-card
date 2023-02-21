@@ -1,5 +1,21 @@
 # odin-memory-card
 
+## What is this about?
+
+This toy project is a reinforcement to React hooks.The design of the project is to showcase the understanding of concepts below:
+
+- UseState
+- useEffect
+- ForwardRef
+
+The aim of this project is to build a simple and minimalist memory card game.
+
+## How to play
+
+- Choose a card, but don't click on the same one twice.
+- Each correct choice gives you 1 point.
+- Score 20 points and win the game
+
 # Getting Started with Vite
 
 ## Available Scripts
