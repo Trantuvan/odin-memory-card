@@ -17,7 +17,6 @@ function App() {
   useEffect(() => {
     // *win case
     if (currScore === 20) {
-      console.log(`currScore: ${currScore}`);
       setBestScore(currScore);
       setIsWon(true);
       modalRef.current?.showModal();
@@ -26,20 +25,13 @@ function App() {
 
   const handleClick = (e: React.MouseEvent, index: number): undefined => {
     const indexSelected = selectedCards.find((cardIndex) => cardIndex === index);
-    console.log({
-      isSelectedCard: indexSelected,
-      index,
-    });
-
     if (indexSelected) {
       // *click the same card
-      console.log('card selected');
       setBestScore(currScore);
       modalRef.current?.showModal();
       return undefined;
     }
     // *click different card
-    console.log('add new card');
     setSelectedCards((prevCards) => [...prevCards, index]);
     setCurrScore((prevScore) => prevScore + 1);
 
