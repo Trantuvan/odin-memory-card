@@ -2,16 +2,16 @@ import clsx from 'clsx';
 
 import Card from '@components/Card';
 import styles from '@styles/GamePage.module.css';
-import { shuffle, getImgs } from '@helpers/index';
 
 type GamePageProps = {
   handleClick: (e: React.MouseEvent, index: number) => void;
+  imgArr: { id: number; src: string }[];
 };
 
-function GamePage({ handleClick }: GamePageProps) {
+function GamePage({ handleClick, imgArr }: GamePageProps) {
   return (
     <div className={clsx(styles.cardContainer)}>
-      {shuffle(getImgs).map((img) => (
+      {imgArr.map((img) => (
         <Card key={img.id} index={img.id} imgUrl={img.src} handleClick={handleClick} />
       ))}
     </div>

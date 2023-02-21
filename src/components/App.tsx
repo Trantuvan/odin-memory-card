@@ -3,6 +3,7 @@ import clsx from 'clsx';
 
 import styles from '@styles/App.module.css';
 import { GamePage, WelcomePage } from '@pages/index';
+import { getImgs, shuffle } from '@helpers/index';
 import { Header, Modal } from './common';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
   const [currScore, setCurrScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const [selectedCards, setSelectedCards] = useState<number[]>([]);
+  const [imgArr, setImgArr] = useState<{ id: number; src: string }[]>(() => getImgs);
 
   const modalRef = useRef<HTMLDialogElement>(null);
 
@@ -25,6 +27,10 @@ function App() {
 
   const handleClick = (e: React.MouseEvent, index: number): undefined => {
     const indexSelected = selectedCards.find((cardIndex) => cardIndex === index);
+    // *shuffle imgArr when clicked
+    // *shuffle takes in arr return new Array<T>
+    setImgArr(shuffle(imgArr));
+
     if (indexSelected) {
       // *click the same card
       setBestScore(currScore);
@@ -48,7 +54,7 @@ function App() {
     <div className={clsx(styles.app)}>
       <Header currScore={currScore} bestScore={bestScore} isHidden={!showGamePage} />
       {showGamePage ? (
-        <GamePage handleClick={handleClick} />
+        <GamePage handleClick={handleClick} imgArr={imgArr} />
       ) : (
         <WelcomePage handleTogglePage={() => setShow(!showGamePage)} />
       )}
