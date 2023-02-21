@@ -4,7 +4,7 @@ import Card from '@components/Card';
 import styles from '@styles/GamePage.module.css';
 
 type GamePageProps = {
-  handleClick: (e: React.MouseEvent, index: number) => void;
+  handleClick: (index: number) => void;
   imgArr: { id: number; src: string }[];
 };
 

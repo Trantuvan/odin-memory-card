@@ -25,7 +25,7 @@ function App() {
     }
   }, [currScore]);
 
-  const handleClick = (e: React.MouseEvent, index: number): undefined => {
+  const handleClick = (index: number): undefined => {
     const indexSelected = selectedCards.find((cardIndex) => cardIndex === index);
     // *shuffle imgArr when clicked
     // *shuffle takes in arr return new Array<T>
