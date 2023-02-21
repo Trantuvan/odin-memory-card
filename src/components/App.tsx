@@ -6,7 +6,7 @@ import { GamePage, WelcomePage } from '@pages/index';
 import { Header, Modal } from './common';
 
 function App() {
-  const [showGamePage, setShow] = useState(true);
+  const [showGamePage, setShow] = useState(false);
   const [isWon, setIsWon] = useState(false);
   const [currScore, setCurrScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
