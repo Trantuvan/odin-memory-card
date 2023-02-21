@@ -24,7 +24,7 @@ function App() {
     }
   }, [currScore]);
 
-  const handleClick = (e: React.MouseEvent, index: number) => {
+  const handleClick = (e: React.MouseEvent, index: number): undefined => {
     const indexSelected = selectedCards.find((cardIndex) => cardIndex === index);
     console.log({
       isSelectedCard: indexSelected,
@@ -36,12 +36,14 @@ function App() {
       console.log('card selected');
       setBestScore(currScore);
       modalRef.current?.showModal();
-    } else {
-      // *click different card
-      console.log('add new card');
-      setSelectedCards((prevCards) => [...prevCards, index]);
-      setCurrScore((prevScore) => prevScore + 1);
+      return undefined;
     }
+    // *click different card
+    console.log('add new card');
+    setSelectedCards((prevCards) => [...prevCards, index]);
+    setCurrScore((prevScore) => prevScore + 1);
+
+    return undefined;
   };
 
   const handleRestState = () => {
