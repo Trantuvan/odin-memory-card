@@ -2,7 +2,7 @@
 
 ## What is this about?
 
-This toy project is a reinforcement to React hooks.The design of the project is to showcase the understanding of concepts below:
+This toy project is a reinforcement to React hooks.The looks & feels of the project is a clone of [@Moonii](https://github.com/mooniiDev/memory-game) to showcase the understanding of concepts below:
 
 - UseState
 - useEffect
