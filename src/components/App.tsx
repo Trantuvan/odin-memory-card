@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 import { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 
@@ -33,7 +34,8 @@ function App() {
 
     if (indexSelected) {
       // *click the same card
-      setBestScore(currScore);
+      const isCurrGreater = currScore > bestScore;
+      isCurrGreater ? setBestScore(currScore) : setBestScore(bestScore);
       modalRef.current?.showModal();
       return undefined;
     }
